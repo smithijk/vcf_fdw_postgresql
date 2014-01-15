@@ -9,21 +9,21 @@ Requirements
 
 1. PostgreSQL 9.1 or greater
 2. Multicorn 0.9.1 or greater
-3. modified CyVCF library that accepts user input as to which samples to retrieve
+3. modified CyVCF library that accepts user input as to which samples to retrieve. See https://github.com/wenjiany/cyvcf
 4. VCF files are tabix indexed
 
 
 Installation
 ============
 
-1. Copy vcf_wrapper to multicorn-version/python/multicorn/ directory.
+1. Copy ./python/multicorn/vcffdw.py to multicorn-version/python/multicorn/ directory.
 2. cd multicorn-version
 3. make && make install 
 4. Execute the following SQL commands in PostgreSQL:
 
 ```sql
 CREATE SERVER multicorn_vcf FOREIGN DATA WRAPPER multicorn 
-OPTIONS (wrapper 'multicorn.vcf_wrapper.vcfFdw');
+OPTIONS (wrapper 'multicorn.vcffdw.vcfFdw');
 
 CREATE FOREIGN TABLE vcfinfo(
   begin INT,
