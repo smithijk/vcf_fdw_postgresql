@@ -65,3 +65,26 @@ class vcfFdw (ForeignDataWrapper):
             line['genotype'] = record.genotype(s)['GT']
             yield line
    
+class sampleFdw (ForeignDataWrapper):
+  def __init__(self, options, columns):
+    super(sampleFdw, self).__init__(options, columns)
+    self.columns = columns
+
+  def execute(self, quals, columns):
+    directory = None
+    for qual in quals:
+      if qual.field_name == 'directory':
+        directory = qual.value
+
+    if (directory is not None):
+      for vcf_file in glob.glob(directory):
+        try:
+          reader = cyvcf.Reader(filename=vcf_file)
+        except:
+          continue
+        for s in reader.samples:
+          line = {}
+          line['sample'] = s
+          line['file'] = vcf_file
+          line['directory'] = directory
+          yield line

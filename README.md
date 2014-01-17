@@ -22,6 +22,7 @@ Installation
 4. Execute the following SQL commands in PostgreSQL:
 
 ```sql
+
 CREATE SERVER multicorn_vcf FOREIGN DATA WRAPPER multicorn 
 OPTIONS (wrapper 'multicorn.vcffdw.vcfFdw');
 
@@ -44,7 +45,6 @@ CREATE FOREIGN TABLE vcfinfo(
 ) SERVER multicorn_vcf;
 ```
 
-
 Basic Usage
 ============
 
@@ -60,5 +60,18 @@ Query below retrieves SNPs info and genotypes only for samples "sample1" and "sa
 ```sql
 SELECT * FROM vcfinfo WHERE chrom = 'chr8' AND begin = '38268656' AND stop = '38326352' 
   AND sample in ('sample1', 'sample2') AND directory = '/path/to/vcf/files/*gz';
+```
+
+Query below retrieves sampleids included in the vcf files.
+
+```sql
+CREATE FOREIGN TABLE vcf_sample_info(
+  sample VARCHAR,
+  file VARCHAR,
+  directory VARCHAR
+) SERVER multicorn_vcf_sample;
+
+SELECT * from vcf_sample_info WHERE 
+      directory = '/path/to/vcf/file.vcf.gz';
 ```
 
