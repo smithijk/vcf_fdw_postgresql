@@ -75,3 +75,30 @@ SELECT * from vcf_sample_info WHERE
       directory = '/path/to/vcf/file.vcf.gz';
 ```
 
+Query below retrieves sampleids included in the vcf files.
+
+```sql
+CREATE SERVER multicorn_vcf_info FOREIGN DATA WRAPPER multicorn 
+OPTIONS (wrapper 'multicorn.vcffdw.infoFdw');
+
+CREATE FOREIGN TABLE vcf_snp_info(
+  begin INT,
+  stop INT,
+  sample VARCHAR,
+  chrom VARCHAR,
+  pos INT,
+  id VARCHAR,
+  ref VARCHAR,
+  alt VARCHAR,
+  qual VARCHAR,
+  filter VARCHAR,
+  format VARCHAR,
+  info VARCHAR,
+  file VARCHAR,
+  directory VARCHAR
+) SERVER multicorn_vcf_info;
+
+
+SELECT distinct chrom, pos, ref, alt, info FROM vcf_snp_info WHERE chrom = 'chr8' AND begin = '38268656' AND stop = '38326352' AND directory = '/path/to/vcf_files/*gz';
+```
+

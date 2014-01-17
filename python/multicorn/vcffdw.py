@@ -88,3 +88,55 @@ class sampleFdw (ForeignDataWrapper):
           line['file'] = vcf_file
           line['directory'] = directory
           yield line
+
+
+class infoFdw (ForeignDataWrapper):
+  ''' Wrapper only returns variation information.
+      No genotypes will be passed '''
+  
+  def __init__(self, options, columns):
+    super(infoFdw, self).__init__(options, columns)
+    self.columns = columns
+
+  def execute(self, quals, columns):
+    begin = None
+    stop = None
+    chrom = None
+    filter = None
+    directory = None
+    for qual in quals:
+      if qual.field_name == 'begin':
+        begin = qual.value
+      elif qual.field_name == 'stop':
+        stop = qual.value
+      elif qual.field_name == 'chrom':
+        chrom = qual.value
+      elif qual.field_name == 'filter':
+        filter = qual.value
+      elif qual.field_name == 'directory':
+        directory = qual.value
+
+    if (directory is not None and chrom is not None and begin is not None and stop is not None):
+      for vcf_file in glob.glob(directory):
+        try:
+          reader = cyvcf.Reader(filename=vcf_file)
+          reader.subset_by_samples([])
+        except:
+          continue
+        for record in reader.fetch(chrom, begin, stop):
+          line = {}
+          line['file'] = vcf_file
+          line['begin'] = begin
+          line['stop'] = stop
+          line['chrom'] = chrom
+          line['chrom'] = record.CHROM
+          line['pos'] = record.POS
+          line['id'] = record.ID
+          line['ref'] = record.REF
+          line['alt'] = record.ALT
+          line['qual'] = record.QUAL
+          line['filter'] = record.FILTER
+          line['format'] = record.FORMAT
+          line['info'] = record.INFO
+          line['directory'] = directory
+          yield line
