@@ -3,9 +3,9 @@ import cyvcf
 from cyvcf import utils
 import glob
 
-class vcfFdw (ForeignDataWrapper):
+class genotypeFdw (ForeignDataWrapper):
   def __init__(self, options, columns):
-    super(vcfFdw, self).__init__(options, columns)
+    super(genotypeFdw, self).__init__(options, columns)
     self.columns = columns
 
   def execute(self, quals, columns):

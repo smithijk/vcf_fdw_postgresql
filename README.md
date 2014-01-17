@@ -24,7 +24,7 @@ Installation
 ```sql
 
 CREATE SERVER multicorn_vcf FOREIGN DATA WRAPPER multicorn 
-OPTIONS (wrapper 'multicorn.vcffdw.vcfFdw');
+OPTIONS (wrapper 'multicorn.vcffdw.genotypeFdw');
 
 CREATE FOREIGN TABLE vcfinfo(
   begin INT,
