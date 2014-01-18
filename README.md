@@ -22,8 +22,9 @@ Installation
 4. Execute the following SQL commands in PostgreSQL:
 
 ```sql
+CREATE EXTENSION multicorn;
 
-CREATE SERVER multicorn_vcf FOREIGN DATA WRAPPER multicorn 
+CREATE SERVER multicorn_vcf_genotype FOREIGN DATA WRAPPER multicorn 
 OPTIONS (wrapper 'multicorn.vcffdw.genotypeFdw');
 
 CREATE FOREIGN TABLE vcfinfo(
@@ -42,7 +43,7 @@ CREATE FOREIGN TABLE vcfinfo(
   genotype VARCHAR,
   file VARCHAR,
   directory VARCHAR
-) SERVER multicorn_vcf;
+) SERVER multicorn_vcf_genotype;
 ```
 
 Basic Usage
@@ -51,14 +52,14 @@ Basic Usage
 Query below retrieves SNPs info and genotypes for all samples in the vcf files for the SNPs within the specified region.
 
 ```sql
-SELECT * FROM vcfinfo WHERE chrom = 'chr8' AND begin = '38268656' AND stop = '38326352' 
+SELECT * FROM vcfinfo WHERE chrom = '8' AND begin = '38268656' AND stop = '38326352' 
 AND directory = '/path/to/vcf/files/*gz';
 ```
 
 Query below retrieves SNPs info and genotypes only for samples "sample1" and "sample2"
 
 ```sql
-SELECT * FROM vcfinfo WHERE chrom = 'chr8' AND begin = '38268656' AND stop = '38326352' 
+SELECT * FROM vcfinfo WHERE chrom = '8' AND begin = '38268656' AND stop = '38326352' 
   AND sample in ('sample1', 'sample2') AND directory = '/path/to/vcf/files/*gz';
 ```
 
@@ -75,7 +76,8 @@ SELECT * from vcf_sample_info WHERE
       directory = '/path/to/vcf/file.vcf.gz';
 ```
 
-Query below retrieves sampleids included in the vcf files.
+Query below retrieves variants information included in the vcf files, but
+does not retrieve genotypes.
 
 ```sql
 CREATE SERVER multicorn_vcf_info FOREIGN DATA WRAPPER multicorn 
@@ -99,6 +101,8 @@ CREATE FOREIGN TABLE vcf_snp_info(
 ) SERVER multicorn_vcf_info;
 
 
-SELECT distinct chrom, pos, ref, alt, info FROM vcf_snp_info WHERE chrom = 'chr8' AND begin = '38268656' AND stop = '38326352' AND directory = '/path/to/vcf_files/*gz';
+SELECT distinct chrom, pos, ref, alt, info FROM vcf_snp_info 
+WHERE chrom = '8' AND begin = '38268656' AND stop = '38326352' 
+AND directory = '/path/to/vcf_files/*gz';
 ```
 
