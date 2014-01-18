@@ -1,7 +1,7 @@
 from multicorn import ForeignDataWrapper
 import cyvcf
 from cyvcf import utils
-import glob
+import glob, re
 
 class genotypeFdw (ForeignDataWrapper):
   def __init__(self, options, columns):
@@ -64,7 +64,79 @@ class genotypeFdw (ForeignDataWrapper):
             line['sample'] = s
             line['genotype'] = record.genotype(s)['GT']
             yield line
-   
+
+class gtWideFdw (ForeignDataWrapper):
+  ''' return vcf in a wide format
+      only accept a single VCF
+  '''
+  def __init__(self, options, columns):
+    super(gtWideFdw, self).__init__(options, columns)
+    self.columns = columns
+
+    self.vcf_file = options.get('vcf_file', None)
+    if self.vcf_file is None:
+      raise Exception("VCF file needs to be specified")
+    try:
+      self.reader = cyvcf.Reader(filename=self.vcf_file)
+    except:
+      raise Exception("Can not open vcf file: " + self.vcf_file)
+
+  def execute(self, quals, columns):
+    self.reader.reset_samples()
+
+    begin = None
+    stop = None
+    chrom = None
+    sample = None
+    filter = None
+    for qual in quals:
+      if qual.field_name == 'begin':
+        begin = qual.value
+      elif qual.field_name == 'stop':
+        stop = qual.value
+      elif qual.field_name == 'chrom':
+        chrom = qual.value
+      elif qual.field_name == 'sample':
+        sample = qual.value
+      elif qual.field_name == 'filter':
+        filter = qual.value
+
+    if (chrom is None or begin is None or stop is None):
+      raise Exception("chrom, begin and stop need to be specified")
+
+    ''' Not clear if below would gain anything '''
+    if (sample is None):
+      wanted_sample = self.reader.samples
+    elif (type(sample) != list):
+      wanted_sample = re.split('\|', sample)
+    else:
+      raise Exception("query 'sample in (a,b,c)' is not implemented. Use sample='a|b|c' instead.")
+
+    wanted_sample = [s for s in wanted_sample if s in columns]
+
+    if (len(wanted_sample) != len(self.reader.samples)):
+      self.reader.subset_by_samples(wanted_sample)
+      
+    line = { 'file' : self.vcf_file,
+             'begin' : begin,
+             'stop' : stop,
+             'sample' : sample,
+    }
+    
+    for record in self.reader.fetch(chrom, begin, stop):
+      line['chrom'] = record.CHROM
+      line['pos'] = record.POS
+      line['id'] = record.ID
+      line['ref'] = record.REF
+      line['alt'] = record.ALT
+      line['qual'] = record.QUAL
+      line['filter'] = record.FILTER
+      line['format'] = record.FORMAT
+      line['info'] = record.INFO
+      for s in self.reader.samples:
+        line[s] = record.genotype(s)['GT']
+      yield line
+
 class sampleFdw (ForeignDataWrapper):
   def __init__(self, options, columns):
     super(sampleFdw, self).__init__(options, columns)
