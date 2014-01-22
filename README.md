@@ -106,3 +106,7 @@ WHERE chrom = '8' AND begin = '38268656' AND stop = '38326352'
 AND directory = '/path/to/vcf_files/*gz';
 ```
 
+Disclaimer
+==========
+
+This software comes without any warranty whatsoever.  Use at your own risk.
