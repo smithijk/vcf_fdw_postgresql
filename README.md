@@ -44,6 +44,35 @@ CREATE FOREIGN TABLE vcfinfo(
   file VARCHAR,
   directory VARCHAR
 ) SERVER multicorn_vcf_genotype;
+
+CREATE SERVER multicorn_vcf_info FOREIGN DATA WRAPPER multicorn 
+OPTIONS (wrapper 'multicorn.vcffdw.infoFdw');
+
+CREATE FOREIGN TABLE vcf_snp_info(
+  begin INT,
+  stop INT,
+  sample VARCHAR,
+  chrom VARCHAR,
+  pos INT,
+  id VARCHAR,
+  ref VARCHAR,
+  alt VARCHAR,
+  qual VARCHAR,
+  filter VARCHAR,
+  format VARCHAR,
+  info VARCHAR,
+  file VARCHAR,
+  directory VARCHAR
+) SERVER multicorn_vcf_info;
+
+CREATE SERVER multicorn_vcf_info FOREIGN DATA WRAPPER multicorn
+OPTIONS (wrapper 'multicorn.vcffdw.sampleFdw');
+
+CREATE FOREIGN TABLE vcf_sample_info(
+  sample VARCHAR,
+  file VARCHAR,
+  directory VARCHAR
+) SERVER multicorn_vcf_sample;
 ```
 
 Basic Usage
@@ -66,11 +95,6 @@ SELECT * FROM vcfinfo WHERE chrom = '8' AND begin = '100000' AND stop = '175000'
 Query below retrieves sampleids included in the vcf files.
 
 ```sql
-CREATE FOREIGN TABLE vcf_sample_info(
-  sample VARCHAR,
-  file VARCHAR,
-  directory VARCHAR
-) SERVER multicorn_vcf_sample;
 
 SELECT * from vcf_sample_info WHERE 
       directory = '/path/to/vcf/file.vcf.gz';
@@ -80,26 +104,6 @@ Query below retrieves variants information included in the vcf files, but
 does not retrieve genotypes.
 
 ```sql
-CREATE SERVER multicorn_vcf_info FOREIGN DATA WRAPPER multicorn 
-OPTIONS (wrapper 'multicorn.vcffdw.infoFdw');
-
-CREATE FOREIGN TABLE vcf_snp_info(
-  begin INT,
-  stop INT,
-  sample VARCHAR,
-  chrom VARCHAR,
-  pos INT,
-  id VARCHAR,
-  ref VARCHAR,
-  alt VARCHAR,
-  qual VARCHAR,
-  filter VARCHAR,
-  format VARCHAR,
-  info VARCHAR,
-  file VARCHAR,
-  directory VARCHAR
-) SERVER multicorn_vcf_info;
-
 
 SELECT distinct chrom, pos, ref, alt, info FROM vcf_snp_info 
 WHERE chrom = '8' AND begin = '100000' AND stop = '175000' 
