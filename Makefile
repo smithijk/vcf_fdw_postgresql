@@ -1,5 +1,7 @@
 
 MULTICORN = /pub/share/vcf_proj/multicorn-1.0.0.beta
+TESTDIR = /tmp/pg_vcf_wrapper
+TESTOUTPUT = ${TESTDIR}/test_vcf_fdw.out
 
 install : python/multicorn/vcffdw.py
 	cp python/multicorn/vcffdw.py ${MULTICORN}/python/multicorn/
@@ -8,16 +10,16 @@ install : python/multicorn/vcffdw.py
 .PHONY: test
 
 testdata : 
-	mkdir -p /tmp/pg_vcf_wrapper/data/  
-	cp -r test/data/* /tmp/pg_vcf_wrapper/data/
+	mkdir -p ${TESTDIR}/data/  
+	cp -r test/data/* ${TESTDIR}/data/
 
 test : testdata
 	@while [ -z "$$PGTEST" ]; do \
         read -r -p "Database used for testing: " PGTEST;\
     done && \
-	psql $${PGTEST} < test/test_vcf_fdw.sql
-	@echo check /tmp/pg_vcf_wrapper/test_vcf_fdw.out for output.
-	@diff /tmp/pg_vcf_wrapper/test_vcf_fdw.out /tmp/pg_vcf_wrapper/data/expected.out && echo "test PASSED" || echo "test FAILED"
+	psql $${PGTEST} < test/test_vcf_fdw.sql > ${TESTOUTPUT} 
+	@diff ${TESTOUTPUT} ${TESTDIR}/data/expected.out && echo "test PASSED" || echo "test FAILED"
+	@echo SQL output is saved at  ${TESTOUTPUT}.
 
 clean:
-	rm -rf /tmp/pg_vcf_wrapper
+	rm -rf ${TESTDIR}

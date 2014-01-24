@@ -1,6 +1,4 @@
 
-\o /tmp/pg_vcf_wrapper/test_vcf_fdw.out
-
 BEGIN;
 
 CREATE EXTENSION IF NOT EXISTS multicorn;
