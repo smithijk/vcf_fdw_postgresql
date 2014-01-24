@@ -110,6 +110,9 @@ WHERE chrom = '8' AND begin = '100000' AND stop = '175000'
 AND directory = '/path/to/vcf_files/*gz';
 ```
 
+Note that you are able to join these foreign data tables with ordinary data tables.
+The test scripts included herein test this capability.
+
 Disclaimer
 ==========
 

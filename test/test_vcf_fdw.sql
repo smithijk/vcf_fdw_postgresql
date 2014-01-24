@@ -59,7 +59,29 @@ CREATE FOREIGN TABLE IF NOT EXISTS test_vcf_snp_info(
   directory VARCHAR
 ) SERVER test_multicorn_vcf_info;
 
+CREATE TABLE thou_demographics(
+  population VARCHAR,
+  sra_accession_number VARCHAR,
+  coriell_id VARCHAR,
+  family VARCHAR,
+  gender VARCHAR,
+  relationship VARCHAR,
+  type VARCHAR,
+  whole_genome_center VARCHAR,
+  exome_center VARCHAR,
+  pilot_1_center VARCHAR,
+  pilot_2_center VARCHAR,
+  pilot_3_center VARCHAR,
+  has_omni_genotypes VARCHAR,
+  has_axiom_genotypes VARCHAR,
+  has_more_than_3x_coverage_at_omni_sites VARCHAR,
+  has_more_than_70percent_of_exome_targets_covered_to_20x VARCHAR 
+  );
 
+COPY thou_demographics FROM '/tmp/pg_vcf_wrapper/data/thou_genome_demographics_table.csv' DELIMITER ',' CSV;
+
+SELECT * FROM test_vcf_sample_info AS v inner join thou_demographics AS d ON d.coriell_id = v.sample WHERE directory='/tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz' AND gender = 'male' AND type = 'trio';
+ 
 SELECT distinct chrom, pos, ref, alt, info FROM test_vcf_snp_info 
 WHERE chrom = '8' AND begin = '100000' AND stop = '175000' 
 AND directory = '/tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz';
@@ -107,6 +129,11 @@ WHERE chrom = '8' AND begin = '100000' AND stop = '175000'
   AND directory = '/tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz'
 ORDER by pos, sample LIMIT 10;
 
+SELECT * FROM test_vcf_sample_info AS v INNER JOIN thou_demographics AS d 
+  ON d.coriell_id = v.sample WHERE directory='/pub/PostgreSQL/test_files/one_big_file/*.gz'; 
+
+
+DROP TABLE thou_demographics;
 DROP FOREIGN TABLE test_vcf_gt_long;
 
 -- Example for querying vcf genotypes in wide form

@@ -1,0 +1,101 @@
+population,sra_accession_number,coriell_id,family,gender,relationship,type,whole_genome_center,exome_center,pilot_1_center,pilot_2_center,pilot_3_center,has_omni_genotypes,has_axiom_genotypes,has_more_than_3x_coverage_at_omni_sites,has_more_than_70percent_of_exome_targets_covered_to_20x
+PUR,SRS008768,HG01098,PR31,female,mother,trio,WUGSC,WUGSC,,,,1,0,1,1
+LWK,SRS001636,NA19468,,female,,unrel,SC,BCM,,,BCM,1,1,1,1
+CEU,SRS000061,NA12044,1346,female,pat grandmother,trio,SC/BCM,BCM,SC/BCM,,BCM,1,1,1,1
+ASW,SRS003760,NA20126,2446,male,father,trio,WUGSC,WUGSC,,,,1,1,1,1
+TSI,SRS001702,NA20535,,female,,unrel,SC ,BCM,,,SC,1,1,1,1
+GBR,SRS010719,HG00154,,female,,unrel,BGI,BGI,,,,1,0,1,1
+CHB,SRS000666,NA18611,,male,,unrel,BGI ,BGI ,,,WUGSC,1,1,0,1
+ASW,SRS003773,NA20289,2471,female,mother,duo,WUGSC,WUGSC,,,,1,1,1,1
+CHB,SRS000690,NA18637,,male,,unrel,BGI ,BGI ,,,BI,1,1,1,1
+CEU,SRS000642,NA12889,1463,male,pat grandfather,trio,MPIMG ,BI,,,BI,1,1,1,1
+TSI,SRS001714,NA20585,,female,,unrel,SC ,BGI,,,SC,1,1,1,1
+CEU,SRS000641,NA12843,1458,female,mat grandmother,trio,MPIMG ,BI,,,BI,1,1,1,1
+YRI,SRS000777,NA19095,Y041,female,mother,trio,BCM ,BCM ,,,BCM ,1,1,1,1
+YRI,SRS000705,NA18868,Y007,male,father,trio,BI ,BI ,,,BI,1,1,1,1
+FIN,SRS008542,HG00272,,female,,unrel,SC,BI,,,,1,0,1,1
+ASW,SRS003775,NA20291,2472,male,father,duo,WUGSC,WUGSC,,,,1,1,1,1
+CHS,SRS008707,HG00651,SH072,female,mother,trio,BGI,BGI,,,,1,0,1,1
+GBR,SRS006882,HG00149,,male,,unrel,SC,BCM,,,,1,0,0,1
+CLM,SRS010851,HG01272,CLM21,female,mother,trio,BCM,BCM,,,,1,0,1,1
+TSI,SRS001703,NA20536,,male,,unrel,SC ,BCM,,,,1,0,1,1
+ASW,SRS003752,NA19917,2431,female,mother,trio,BI,BI,,,,1,1,1,1
+YRI,SRS000781,NA19117,Y100,male,father,trio,BCM ,BCM ,,,BCM ,1,1,0,1
+JPT,SRS000740,NA19003,,female,,unrel,BI ,BI ,,,BI,1,1,1,1
+TSI,SRS001747,NA20786,,female,,unrel,SC ,BI,,,SC,1,1,1,1
+JPT,SRS000745,NA19054,,female,,unrel,BI ,BI ,,,BI,1,1,1,1
+YRI,SRS000201,NA19171,Y047,male,father,trio,WUGSC/MPIMG,WUGSC,WUGSC/MPIMG,,WUGSC,1,1,1,1
+CHB,SRS000671,NA18617,,female,,unrel,SC ,BCM,,,BCM,1,1,1,1
+YRI,SRS000714,NA18934,Y036,male,father,trio,WUGSC ,WUGSC ,,,WUGSC,1,1,1,1
+PUR,SRS008764,HG01079,PR21,male,father,trio,BI,BI,,,,1,0,1,1
+FIN,SRS008569,HG00350,,female,,unrel,BCM,BCM,,,,1,0,1,1
+TSI,SRS001701,NA20534,,male,,unrel,SC ,BCM,,,SC,1,1,1,1
+ASW,SRS006573,NA19923,2434,female,mother,unrel,BCM,BCM,,,,1,0,1,1
+YRI,SRS000778,NA19096,Y041,male,father,trio,BCM ,BCM ,,,BCM ,1,1,1,1
+LWK,SRS001616,NA19440,,female,,unrel,SC,BCM,,,BCM,1,1,1,0
+GBR,SRS008510,HG00126,,male,,unrel,SC,BCM,,,,1,0,0,1
+YRI,SRS000101,NA18507,Y009,male,father,trio,SC,BCM,SC,,,1,1,1,1
+LWK,SRS001570,NA19350,,male,,unrel,BI,BI,,,BCM,1,1,1,1
+CHS,SRS008653,HG00557,SH045,female,mother,trio,BGI,BGI,,,,1,0,1,1
+PUR,SRS010803,HG01171,PR24,female,mother,trio,BGI,BGI,,,,1,0,1,1
+CHS,SRS008676,HG00595,SH058,male,father,trio,SC,BCM,,,,1,0,1,1
+FIN,SRS008563,HG00342,,male,,unrel,BGI,BGI,,,,1,0,0,1
+CEU,SRS001261,NA11932,1424a,male,mat grandfather,unrel,MPIMG ,BGI,,,,1,0,1,1
+CEU,SRS000051,NA11931,1424,female,pat grandmother,trio,SC/454MSC,BGI,SC/454MSC,,,1,1,1,1
+CLM,SRS074296,HG01465,CLM54,female,mother,trio,BI,BI,,,,1,0,1,1
+FIN,SRS008572,HG00355,,female,,unrel,BCM,BCM,,,,1,0,1,1
+FIN,SRS008559,HG00336,,male,,unrel,BGI,BGI,,,,1,0,1,1
+TSI,SRS001736,NA20769,,female,,unrel,SC ,BI,,,SC,1,1,1,1
+CEU,SRS000637,NA12827,1456,male,pat grandfather,trio,MPIMG ,BGI,,,,1,1,1,1
+CHS,SRS008727,HG00692,SH086,male,father,trio,BGI,BGI,,,,1,0,1,1
+ASW,SRS003678,NA19713,2436,female,mother,trio,BI,BI,,,,1,1,1,1
+GBR,SRS006884,HG00151,,male,,unrel,SC,BCM,,,,1,0,1,1
+CEU,SRS000622,NA12340,1330,male,pat grandfather,trio,BI ,BI ,,,BCM,1,1,0,1
+LWK,SRS001603,NA19403,,female,,unrel,ILLUMINA,BCM,,,BCM,1,1,1,1
+FIN,SRS008548,HG00312,,male,,unrel,SC,BI,,,,1,0,1,1
+CHB,SRS000674,NA18620,,male,,unrel,BGI ,BGI ,,,BCM,1,1,1,1
+CHS,SRS008632,HG00513,SH032,female,mother,trio,BGI,BGI,,,,1,0,1,1
+FIN,SRS008554,HG00321,,male,,unrel,BGI,BGI,,,,1,0,0,1
+LWK,SRS001546,NA19308,,male,,unrel,BCM ,BCM ,,,BCM,1,1,1,0
+MXL,SRS006567,NA19764,2405,female,mother,unrel,MPIMG,BCM,,,,1,0,1,1
+TSI,SRS001728,NA20761,,female,,unrel,SC ,BGI,,,,1,1,1,1
+JPT,SRS001485,NA19004,,male,,unrel,BI ,BI ,,,,1,0,1,1
+GBR,SRS008529,HG00259,,female,,unrel,BGI,BGI,,,,1,0,1,1
+IBS,SRS074325,HG01515,IBS006,male,father,trio,WUGSC,WUGSC,,,,1,0,1,0
+CHS,SRS008734,HG00702,SH089,female,mother,trio,BGI,BGI,,,,1,0,1,1
+LWK,SRS001611,NA19435,,female,,unrel,SC,BCM,,,BCM,1,1,1,1
+TSI,SRS001720,NA20753,,female,,unrel,SC ,BGI,,,SC,1,1,1,1
+LWK,SRS001604,NA19404,,female,,unrel,ILLUMINA,BCM,,,BCM,1,1,1,0
+LWK,SRS001605,NA19428,,male,,unrel,ILLUMINA,BCM,,,BCM,1,1,1,1
+LWK,SRS001584,NA19379,,female,,unrel,ILLUMINA,BCM ,,,BCM,1,1,1,1
+CEU,SRS000063,NA12144,1334,male,pat grandfather,trio,ABI,BCM,ABI,,SC,1,1,1,1
+YRI,SRS000211,NA19225,Y057,female,mother,trio,SC,BGI,SC,,SC,1,1,1,1
+JPT,SRS000157,NA18948,,male,,unrel,SC,BGI,SC,,SC,1,1,1,1
+JPT,SRS000769,NA19082,,male,,unrel,SC,WUGSC,,,WUGSC,1,1,1,1
+GBR,SRS006837,HG00096,,male,,unrel,WUGSC,WUGSC,,,,1,0,1,1
+CEU,SRS000082,NA12812,1454,male,pat grandfather,trio,BCM,BCM,BCM,,BCM ,1,1,1,1
+CHS,SRS008646,HG00542,SH042,male,father,trio,BGI,BGI,,,,1,0,1,1
+CLM,SRS074293,HG01462,CLM53,female,mother,trio,BI,BI,,,,1,0,1,1
+YRI,SRS000707,NA18874,Y019,male,father,trio,BI ,BI ,,,,1,1,1,1
+CLM,SRS010857,HG01278,CLM23,female,mother,trio,BCM,BCM,,,,1,0,1,1
+FIN,SRS010724,HG00274,,female,,unrel,BGI,BGI,,,,1,0,1,1
+CHS,SRS008680,HG00608,SH062,female,mother,trio,BGI,BGI,,,,1,0,1,1
+JPT,SRS001483,NA18988,,male,,unrel,BI ,BI ,,,BI,1,0,1,1
+CEU,SRS000038,NA07357,1345,male,mat grandfather,trio,ABI,BCM,ABI,,SC,1,1,1,1
+LWK,SRS001565,NA19332,,female,,unrel,BI,BI,,,BCM,1,1,1,1
+GBR,SRS008535,HG00265,,male,,unrel,SC,BI,,,,1,0,1,1
+CEU,SRS000052,NA11992,1362,male,pat grandfather,trio,BI/BCM,BCM,BI/BCM,,BI,1,1,1,1
+ASW,SRS003810,NA20359,2495,female,mother,duo,MPIMG,BCM,,,,1,1,1,1
+MXL,SRS003683,NA19719,m015,female,mother,trio,BI,BI,,,,1,1,1,1
+ASW,SRS003672,NA19704,2368,female,mother,trio,BI,BI,,,,1,1,1,1
+FIN,SRS008591,HG00377,,female,,unrel,SC,BI,,,,1,0,1,1
+FIN,SRS008552,HG00319,,female,,unrel,BGI,BGI,,,,1,0,1,1
+JPT,SRS000165,NA18961,,male,,unrel,BI,BI,BI,,BI,1,1,1,1
+PUR,SRS010821,HG01191,PR40,female,mother,trio,BI,BI,,,,1,0,1,0
+JPT,SRS000166,NA18964,,female,,unrel,BI,BI,BI,,BI,1,1,1,1
+PUR,SRS010776,HG01107,PR33,male,father,trio,BGI,BGI,,,,1,0,1,1
+CHS,SRS008607,HG00421,SH007,male,father,trio,BGI,BGI,,,,1,0,1,1
+TSI,SRS001713,NA20582,,female,,unrel,SC ,BGI,,,,1,1,1,1
+GBR,SRS006914,HG00255,,female,,unrel,MPIMG,BI,,,,1,0,1,1
+CEU,SRS000625,NA12347,13281,male,pat grandfather,trio,SC ,BGI,,,SC,1,1,1,1
+YRI,SRS000103,NA18510,Y010,male,not father,unrel,BI,BI,BI,,,1,1,1,1
