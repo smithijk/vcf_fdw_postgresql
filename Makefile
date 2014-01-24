@@ -17,6 +17,7 @@ test : testdata
     done && \
 	psql $${PGTEST} < test/test_vcf_fdw.sql
 	@echo check /tmp/pg_vcf_wrapper/test_vcf_fdw.out for output.
+	@diff /tmp/pg_vcf_wrapper/test_vcf_fdw.out /tmp/pg_vcf_wrapper/data/expected.out && echo "test PASSED" || echo "test FAILED"
 
 clean:
 	rm -rf /tmp/pg_vcf_wrapper

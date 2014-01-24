@@ -1,0 +1,841 @@
+BEGIN
+CREATE EXTENSION
+CREATE SCHEMA
+SET
+CREATE SERVER
+CREATE SERVER
+CREATE SERVER
+CREATE SERVER
+CREATE FUNCTION
+CREATE FOREIGN TABLE
+ sample  |                              file                               |                   directory                    
+---------+-----------------------------------------------------------------+------------------------------------------------
+ NA19332 | /tmp/pg_vcf_wrapper/data/individual_files/NA19332.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19308 | /tmp/pg_vcf_wrapper/data/individual_files/NA19308.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA12340 | /tmp/pg_vcf_wrapper/data/individual_files/NA12340.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19440 | /tmp/pg_vcf_wrapper/data/individual_files/NA19440.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19379 | /tmp/pg_vcf_wrapper/data/individual_files/NA19379.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA12843 | /tmp/pg_vcf_wrapper/data/individual_files/NA12843.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA12144 | /tmp/pg_vcf_wrapper/data/individual_files/NA12144.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19917 | /tmp/pg_vcf_wrapper/data/individual_files/NA19917.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA12347 | /tmp/pg_vcf_wrapper/data/individual_files/NA12347.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA07357 | /tmp/pg_vcf_wrapper/data/individual_files/NA07357.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19713 | /tmp/pg_vcf_wrapper/data/individual_files/NA19713.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19435 | /tmp/pg_vcf_wrapper/data/individual_files/NA19435.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19428 | /tmp/pg_vcf_wrapper/data/individual_files/NA19428.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19095 | /tmp/pg_vcf_wrapper/data/individual_files/NA19095.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA12889 | /tmp/pg_vcf_wrapper/data/individual_files/NA12889.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19404 | /tmp/pg_vcf_wrapper/data/individual_files/NA19404.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19003 | /tmp/pg_vcf_wrapper/data/individual_files/NA19003.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19096 | /tmp/pg_vcf_wrapper/data/individual_files/NA19096.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19004 | /tmp/pg_vcf_wrapper/data/individual_files/NA19004.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19082 | /tmp/pg_vcf_wrapper/data/individual_files/NA19082.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19350 | /tmp/pg_vcf_wrapper/data/individual_files/NA19350.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA12044 | /tmp/pg_vcf_wrapper/data/individual_files/NA12044.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19719 | /tmp/pg_vcf_wrapper/data/individual_files/NA19719.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19704 | /tmp/pg_vcf_wrapper/data/individual_files/NA19704.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19225 | /tmp/pg_vcf_wrapper/data/individual_files/NA19225.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19468 | /tmp/pg_vcf_wrapper/data/individual_files/NA19468.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA12812 | /tmp/pg_vcf_wrapper/data/individual_files/NA12812.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19403 | /tmp/pg_vcf_wrapper/data/individual_files/NA19403.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA12827 | /tmp/pg_vcf_wrapper/data/individual_files/NA12827.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+ NA19764 | /tmp/pg_vcf_wrapper/data/individual_files/NA19764.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.gz
+(30 rows)
+
+ sample  |                                       file                                       |                                    directory                                     
+---------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------
+ HG00096 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00126 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00149 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00151 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00154 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00255 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00259 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00265 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00272 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00274 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00312 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00319 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00321 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00336 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00342 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00350 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00355 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00377 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00421 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00513 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00542 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00557 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00595 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00608 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00651 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00692 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG00702 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01079 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01098 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01107 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01171 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01191 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01272 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01278 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01462 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01465 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ HG01515 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA07357 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA11931 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA11932 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA11992 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA12044 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA12144 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA12340 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA12347 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA12812 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA12827 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA12843 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA12889 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18507 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18510 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18611 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18617 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18620 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18637 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18868 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18874 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18934 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18948 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18961 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18964 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA18988 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19003 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19004 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19054 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19082 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19095 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19096 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19117 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19171 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19225 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19308 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19332 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19350 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19379 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19403 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19404 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19428 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19435 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19440 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19468 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19704 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19713 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19719 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19764 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19917 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA19923 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20126 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20289 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20291 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20359 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20534 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20535 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20536 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20582 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20585 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20753 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20761 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20769 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ NA20786 | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+(100 rows)
+
+CREATE FOREIGN TABLE
+CREATE TABLE
+COPY 101
+ sample  |                              file                               |                     directory                      | population | sra_accession_number | coriell_id | family | gender |  relationship   | type | whole_genome_center | exome_center | pilot_1_center | pilot_2_center | pilot_3_center | has_omni_genotypes | has_axiom_genotypes | has_more_than_3x_coverage_at_omni_sites | has_more_than_70percent_of_exome_targets_covered_to_20x 
+---------+-----------------------------------------------------------------+----------------------------------------------------+------------+----------------------+------------+--------+--------+-----------------+------+---------------------+--------------+----------------+----------------+----------------+--------------------+---------------------+-----------------------------------------+---------------------------------------------------------
+ NA12889 | /tmp/pg_vcf_wrapper/data/individual_files/NA12889.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz | CEU        | SRS000642            | NA12889    | 1463   | male   | pat grandfather | trio | MPIMG               | BI           |                |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA19096 | /tmp/pg_vcf_wrapper/data/individual_files/NA19096.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz | YRI        | SRS000778            | NA19096    | Y041   | male   | father          | trio | BCM                 | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA12827 | /tmp/pg_vcf_wrapper/data/individual_files/NA12827.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz | CEU        | SRS000637            | NA12827    | 1456   | male   | pat grandfather | trio | MPIMG               | BGI          |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA12340 | /tmp/pg_vcf_wrapper/data/individual_files/NA12340.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz | CEU        | SRS000622            | NA12340    | 1330   | male   | pat grandfather | trio | BI                  | BI           |                |                | BCM            | 1                  | 1                   | 0                                       | 1
+ NA12144 | /tmp/pg_vcf_wrapper/data/individual_files/NA12144.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz | CEU        | SRS000063            | NA12144    | 1334   | male   | pat grandfather | trio | ABI                 | BCM          | ABI            |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA12812 | /tmp/pg_vcf_wrapper/data/individual_files/NA12812.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz | CEU        | SRS000082            | NA12812    | 1454   | male   | pat grandfather | trio | BCM                 | BCM          | BCM            |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA07357 | /tmp/pg_vcf_wrapper/data/individual_files/NA07357.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz | CEU        | SRS000038            | NA07357    | 1345   | male   | mat grandfather | trio | ABI                 | BCM          | ABI            |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA12347 | /tmp/pg_vcf_wrapper/data/individual_files/NA12347.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz | CEU        | SRS000625            | NA12347    | 13281  | male   | pat grandfather | trio | SC                  | BGI          |                |                | SC             | 1                  | 1                   | 1                                       | 1
+(8 rows)
+
+ chrom |  pos   |   ref    |           alt           | info 
+-------+--------+----------+-------------------------+------
+ 8     | 165830 | T        | {C}                     | 
+ 8     | 174216 | C        | {G}                     | 
+ 8     | 155311 | C        | {A}                     | 
+ 8     | 165907 | T        | {C}                     | 
+ 8     | 168521 | G        | {T}                     | 
+ 8     | 152156 | C        | {G}                     | 
+ 8     | 156582 | C        | {T}                     | 
+ 8     | 162228 | A        | {G}                     | 
+ 8     | 163418 | C        | {T}                     | 
+ 8     | 156271 | T        | {C}                     | 
+ 8     | 167246 | G        | {C}                     | 
+ 8     | 161831 | A        | {G}                     | 
+ 8     | 168012 | A        | {C}                     | 
+ 8     | 170815 | C        | {T}                     | 
+ 8     | 155318 | C        | {G}                     | 
+ 8     | 118153 | T        | {C}                     | 
+ 8     | 170052 | G        | {A}                     | 
+ 8     | 161966 | A        | {G}                     | 
+ 8     | 166174 | T        | {G}                     | 
+ 8     | 127653 | G        | {A}                     | 
+ 8     | 163059 | A        | {G}                     | 
+ 8     | 162585 | C        | {T}                     | 
+ 8     | 163387 | C        | {T}                     | 
+ 8     | 166620 | A        | {C}                     | 
+ 8     | 169577 | T        | {C}                     | 
+ 8     | 163549 | G        | {A}                     | 
+ 8     | 168932 | A        | {T}                     | 
+ 8     | 173623 | A        | {T}                     | 
+ 8     | 127218 | T        | {C}                     | 
+ 8     | 151374 | G        | {C}                     | 
+ 8     | 158175 | T        | {G}                     | 
+ 8     | 173839 | G        | {A}                     | 
+ 8     | 155659 | C        | {T}                     | 
+ 8     | 149246 | G        | {A}                     | 
+ 8     | 165732 | G        | {A}                     | 
+ 8     | 113602 | G        | {A}                     | 
+ 8     | 161950 | T        | {C}                     | 
+ 8     | 165547 | C        | {T}                     | 
+ 8     | 159907 | G        | {A}                     | 
+ 8     | 163105 | C        | {G}                     | 
+ 8     | 170328 | G        | {T}                     | 
+ 8     | 171226 | C        | {T}                     | 
+ 8     | 123754 | T        | {G}                     | 
+ 8     | 152564 | G        | {C}                     | 
+ 8     | 156630 | G        | {T}                     | 
+ 8     | 173190 | A        | {C}                     | 
+ 8     | 139793 | T        | {C}                     | 
+ 8     | 166629 | T        | {G}                     | 
+ 8     | 163682 | G        | {A}                     | 
+ 8     | 155977 | G        | {A}                     | 
+ 8     | 163370 | C        | {G}                     | 
+ 8     | 165804 | G        | {T}                     | 
+ 8     | 165857 | A        | {C}                     | 
+ 8     | 170393 | T        | {A}                     | 
+ 8     | 156739 | G        | {A}                     | 
+ 8     | 163366 | T        | {C}                     | 
+ 8     | 170012 | T        | {A}                     | 
+ 8     | 167776 | T        | {C}                     | 
+ 8     | 159169 | T        | {A}                     | 
+ 8     | 168295 | T        | {C}                     | 
+ 8     | 168522 | C        | {T}                     | 
+ 8     | 169542 | G        | {C}                     | 
+ 8     | 162431 | G        | {A}                     | 
+ 8     | 173234 | C        | {T}                     | 
+ 8     | 159073 | CTTCT    | {C}                     | 
+ 8     | 168695 | G        | {A}                     | 
+ 8     | 145535 | C        | {T}                     | 
+ 8     | 163173 | C        | {G}                     | 
+ 8     | 101005 | C        | {G}                     | 
+ 8     | 155931 | C        | {T}                     | 
+ 8     | 171122 | G        | {C}                     | 
+ 8     | 163784 | C        | {G}                     | 
+ 8     | 158194 | C        | {G}                     | 
+ 8     | 157714 | C        | {G}                     | 
+ 8     | 124530 | T        | {C}                     | 
+ 8     | 131403 | T        | {A}                     | 
+ 8     | 170063 | G        | {C}                     | 
+ 8     | 173223 | T        | {G}                     | 
+ 8     | 122175 | A        | {G}                     | 
+ 8     | 156892 | C        | {T}                     | 
+ 8     | 163302 | CAT      | {C}                     | 
+ 8     | 174937 | T        | {C}                     | 
+ 8     | 162256 | A        | {G}                     | 
+ 8     | 171858 | C        | {T}                     | 
+ 8     | 155188 | C        | {T}                     | 
+ 8     | 161424 | G        | {C}                     | 
+ 8     | 163654 | C        | {T}                     | 
+ 8     | 170920 | C        | {A}                     | 
+ 8     | 174475 | G        | {C}                     | 
+ 8     | 112460 | T        | {C}                     | 
+ 8     | 171055 | G        | {C}                     | 
+ 8     | 155757 | A        | {G}                     | 
+ 8     | 162302 | G        | {C}                     | 
+ 8     | 165405 | G        | {T}                     | 
+ 8     | 159920 | C        | {G}                     | 
+ 8     | 172552 | T        | {C}                     | 
+ 8     | 100957 | T        | {G}                     | 
+ 8     | 158984 | G        | {A}                     | 
+ 8     | 166993 | C        | {G}                     | 
+ 8     | 118013 | C        | {T}                     | 
+ 8     | 101200 | C        | {A}                     | 
+ 8     | 173929 | G        | {C}                     | 
+ 8     | 174332 | C        | {T}                     | 
+ 8     | 164851 | C        | {G}                     | 
+ 8     | 164963 | G        | {T}                     | 
+ 8     | 141397 | C        | {G}                     | 
+ 8     | 166916 | A        | {G}                     | 
+ 8     | 166041 | C        | {T}                     | 
+ 8     | 123755 | T        | {G}                     | 
+ 8     | 155494 | TCCCTAAC | {T}                     | 
+ 8     | 158900 | A        | {G}                     | 
+ 8     | 172178 | T        | {G}                     | 
+ 8     | 171230 | T        | {G}                     | 
+ 8     | 112400 | G        | {A}                     | 
+ 8     | 103054 | GAGAA    | {G}                     | 
+ 8     | 155672 | T        | {TTAACCC}               | 
+ 8     | 165722 | C        | {T}                     | 
+ 8     | 159251 | G        | {A}                     | 
+ 8     | 168009 | G        | {A}                     | 
+ 8     | 164310 | C        | {G}                     | 
+ 8     | 159006 | G        | {C}                     | 
+ 8     | 172170 | G        | {A}                     | 
+ 8     | 162389 | T        | {C}                     | 
+ 8     | 162796 | G        | {C}                     | 
+ 8     | 171320 | AG       | {A}                     | 
+ 8     | 154740 | G        | {C}                     | 
+ 8     | 154878 | G        | {C}                     | 
+ 8     | 162414 | C        | {T}                     | 
+ 8     | 172732 | C        | {T}                     | 
+ 8     | 144789 | G        | {A}                     | 
+ 8     | 142083 | G        | {C}                     | 
+ 8     | 163941 | A        | {G}                     | 
+ 8     | 174815 | G        | {A}                     | 
+ 8     | 163255 | C        | {A}                     | 
+ 8     | 143298 | A        | {C}                     | 
+ 8     | 161222 | G        | {C}                     | 
+ 8     | 162310 | G        | {GT}                    | 
+ 8     | 168484 | T        | {C}                     | 
+ 8     | 142394 | C        | {T}                     | 
+ 8     | 167840 | A        | {G}                     | 
+ 8     | 154933 | C        | {T}                     | 
+ 8     | 159082 | T        | {G}                     | 
+ 8     | 157923 | C        | {A}                     | 
+ 8     | 172289 | G        | {A}                     | 
+ 8     | 162440 | G        | {C}                     | 
+ 8     | 169832 | G        | {T}                     | 
+ 8     | 127184 | G        | {C}                     | 
+ 8     | 173967 | G        | {A}                     | 
+ 8     | 113211 | T        | {C}                     | 
+ 8     | 172255 | G        | {C}                     | 
+ 8     | 171717 | A        | {G}                     | 
+ 8     | 154954 | T        | {G}                     | 
+ 8     | 159286 | G        | {C}                     | 
+ 8     | 145745 | A        | {G}                     | 
+ 8     | 155088 | T        | {C}                     | 
+ 8     | 155737 | A        | {C}                     | 
+ 8     | 162407 | C        | {T}                     | 
+ 8     | 164652 | C        | {T}                     | 
+ 8     | 113586 | A        | {T}                     | 
+ 8     | 145780 | C        | {T}                     | 
+ 8     | 161466 | C        | {T}                     | 
+ 8     | 163143 | T        | {A}                     | 
+ 8     | 127256 | G        | {A}                     | 
+ 8     | 171673 | T        | {G}                     | 
+ 8     | 161459 | T        | {G}                     | 
+ 8     | 167329 | A        | {G}                     | 
+ 8     | 162290 | A        | {G}                     | 
+ 8     | 163770 | T        | {C}                     | 
+ 8     | 137516 | C        | {G}                     | 
+ 8     | 143207 | T        | {G}                     | 
+ 8     | 162815 | T        | {C}                     | 
+ 8     | 164676 | C        | {T}                     | 
+ 8     | 169133 | T        | {C}                     | 
+ 8     | 154767 | T        | {A}                     | 
+ 8     | 158891 | T        | {G}                     | 
+ 8     | 159016 | C        | {A}                     | 
+ 8     | 165764 | T        | {G}                     | 
+ 8     | 145819 | A        | {C}                     | 
+ 8     | 165731 | C        | {T}                     | 
+ 8     | 170474 | CT       | {C}                     | 
+ 8     | 155816 | G        | {C}                     | 
+ 8     | 165630 | G        | {C}                     | 
+ 8     | 172477 | T        | {C}                     | 
+ 8     | 172972 | G        | {A}                     | 
+ 8     | 169805 | T        | {C}                     | 
+ 8     | 158227 | A        | {C}                     | 
+ 8     | 159436 | A        | {G}                     | 
+ 8     | 157695 | G        | {A}                     | 
+ 8     | 162121 | G        | {C}                     | 
+ 8     | 162268 | T        | {C}                     | 
+ 8     | 162396 | A        | {G}                     | 
+ 8     | 162980 | G        | {C}                     | 
+ 8     | 163962 | T        | {G}                     | 
+ 8     | 165697 | T        | {C}                     | 
+ 8     | 158828 | A        | {G}                     | 
+ 8     | 168820 | A        | {G}                     | 
+ 8     | 170227 | T        | {C}                     | 
+ 8     | 155807 | G        | {A}                     | 
+ 8     | 160354 | C        | {T}                     | 
+ 8     | 163553 | T        | {C}                     | 
+ 8     | 166322 | T        | {C}                     | 
+ 8     | 164216 | T        | {C}                     | 
+ 8     | 167815 | C        | {A}                     | 
+ 8     | 170409 | T        | {C}                     | 
+ 8     | 155251 | G        | {A}                     | 
+ 8     | 155715 | CT       | {C}                     | 
+ 8     | 170488 | T        | {C}                     | 
+ 8     | 161977 | T        | {C}                     | 
+ 8     | 162193 | A        | {G}                     | 
+ 8     | 165847 | T        | {G}                     | 
+ 8     | 156368 | G        | {T}                     | 
+ 8     | 158300 | A        | {T}                     | 
+ 8     | 167437 | G        | {GT}                    | 
+ 8     | 171865 | C        | {T}                     | 
+ 8     | 139830 | G        | {C}                     | 
+ 8     | 160415 | G        | {A}                     | 
+ 8     | 162226 | A        | {G}                     | 
+ 8     | 170408 | G        | {C}                     | 
+ 8     | 136886 | A        | {G}                     | 
+ 8     | 157937 | G        | {C}                     | 
+ 8     | 173104 | G        | {A}                     | 
+ 8     | 173208 | G        | {A}                     | 
+ 8     | 157086 | G        | {A}                     | 
+ 8     | 168424 | C        | {A}                     | 
+ 8     | 165982 | C        | {T}                     | 
+ 8     | 156768 | G        | {A}                     | 
+ 8     | 167872 | T        | {C}                     | 
+ 8     | 173423 | T        | {C}                     | 
+ 8     | 167298 | G        | {A}                     | 
+ 8     | 169766 | T        | {C}                     | 
+ 8     | 169819 | T        | {C}                     | 
+ 8     | 174347 | A        | {T}                     | 
+ 8     | 161678 | T        | {TC}                    | 
+ 8     | 137461 | T        | {C}                     | 
+ 8     | 156716 | G        | {C}                     | 
+ 8     | 169024 | C        | {G}                     | 
+ 8     | 162375 | A        | {G}                     | 
+ 8     | 171393 | T        | {A}                     | 
+ 8     | 164769 | G        | {A}                     | 
+ 8     | 164984 | A        | {G}                     | 
+ 8     | 120578 | T        | {A}                     | 
+ 8     | 141376 | T        | {G}                     | 
+ 8     | 156294 | C        | {A}                     | 
+ 8     | 172826 | T        | {C}                     | 
+ 8     | 113588 | G        | {T}                     | 
+ 8     | 166429 | A        | {G}                     | 
+ 8     | 173921 | A        | {C}                     | 
+ 8     | 167450 | T        | {G}                     | 
+ 8     | 171282 | C        | {A}                     | 
+ 8     | 167810 | G        | {A}                     | 
+ 8     | 162830 | G        | {A}                     | 
+ 8     | 171819 | C        | {G}                     | 
+ 8     | 171842 | G        | {A}                     | 
+ 8     | 159179 | G        | {A}                     | 
+ 8     | 162134 | T        | {C}                     | 
+ 8     | 162217 | C        | {T}                     | 
+ 8     | 169547 | T        | {C}                     | 
+ 8     | 170613 | G        | {A}                     | 
+ 8     | 167323 | A        | {C}                     | 
+ 8     | 156542 | C        | {T}                     | 
+ 8     | 157039 | T        | {C}                     | 
+ 8     | 170692 | T        | {C}                     | 
+ 8     | 146791 | C        | {G}                     | 
+ 8     | 174222 | A        | {T}                     | 
+ 8     | 174343 | G        | {A}                     | 
+ 8     | 158064 | C        | {G}                     | 
+ 8     | 165486 | A        | {G}                     | 
+ 8     | 172417 | G        | {T}                     | 
+ 8     | 174864 | A        | {G}                     | 
+ 8     | 124278 | A        | {G}                     | 
+ 8     | 157226 | C        | {T}                     | 
+ 8     | 161979 | G        | {A}                     | 
+ 8     | 127415 | T        | {C}                     | 
+ 8     | 156244 | T        | {C}                     | 
+ 8     | 163438 | C        | {T}                     | 
+ 8     | 155821 | C        | {T}                     | 
+ 8     | 158867 | G        | {A}                     | 
+ 8     | 163193 | T        | {C}                     | 
+ 8     | 172811 | T        | {A}                     | 
+ 8     | 114856 | ATATG    | {A}                     | 
+ 8     | 155284 | A        | {G}                     | 
+ 8     | 155508 | C        | {A}                     | 
+ 8     | 155634 | T        | {G}                     | 
+ 8     | 164086 | G        | {C}                     | 
+ 8     | 169423 | G        | {A}                     | 
+ 8     | 173708 | C        | {T}                     | 
+ 8     | 133655 | G        | {T}                     | 
+ 8     | 152555 | G        | {C}                     | 
+ 8     | 171422 | C        | {G}                     | 
+ 8     | 171890 | C        | {G}                     | 
+ 8     | 168099 | A        | {G}                     | 
+ 8     | 163661 | T        | {C}                     | 
+ 8     | 163432 | A        | {G}                     | 
+ 8     | 155687 | C        | {A}                     | 
+ 8     | 167420 | A        | {G}                     | 
+ 8     | 164285 | G        | {C}                     | 
+ 8     | 169834 | G        | {A}                     | 
+ 8     | 111037 | AG       | {A}                     | 
+ 8     | 156375 | G        | {A}                     | 
+ 8     | 171079 | G        | {A}                     | 
+ 8     | 166235 | T        | {C}                     | 
+ 8     | 171495 | T        | {C}                     | 
+ 8     | 137510 | G        | {C}                     | 
+ 8     | 155699 | C        | {CCCTAACCCCTAACCCCTAAT} | 
+ 8     | 121775 | A        | {C}                     | 
+ 8     | 156864 | A        | {G}                     | 
+ 8     | 163021 | G        | {A}                     | 
+ 8     | 171804 | G        | {C}                     | 
+ 8     | 117997 | C        | {T}                     | 
+ 8     | 165305 | A        | {G}                     | 
+ 8     | 163606 | C        | {A}                     | 
+ 8     | 168281 | ATAAT    | {A}                     | 
+ 8     | 162286 | C        | {G}                     | 
+ 8     | 161559 | A        | {T}                     | 
+ 8     | 163226 | T        | {C}                     | 
+ 8     | 156434 | A        | {G}                     | 
+ 8     | 172764 | C        | {T}                     | 
+ 8     | 156504 | G        | {A}                     | 
+ 8     | 170398 | G        | {A}                     | 
+ 8     | 174790 | T        | {C}                     | 
+ 8     | 125511 | G        | {C}                     | 
+ 8     | 156653 | A        | {G}                     | 
+ 8     | 171321 | G        | {A}                     | 
+ 8     | 174685 | G        | {C}                     | 
+ 8     | 161635 | A        | {C}                     | 
+ 8     | 156278 | G        | {A}                     | 
+ 8     | 145509 | C        | {T}                     | 
+ 8     | 172831 | A        | {C}                     | 
+ 8     | 163988 | C        | {G}                     | 
+ 8     | 168425 | C        | {A}                     | 
+ 8     | 171738 | C        | {A}                     | 
+ 8     | 173886 | C        | {T}                     | 
+ 8     | 168269 | A        | {G}                     | 
+ 8     | 172509 | C        | {T}                     | 
+ 8     | 164730 | T        | {C}                     | 
+ 8     | 168810 | T        | {A}                     | 
+ 8     | 173510 | G        | {A}                     | 
+ 8     | 113565 | A        | {G}                     | 
+ 8     | 155723 | C        | {A}                     | 
+ 8     | 143810 | T        | {C}                     | 
+ 8     | 158061 | C        | {T}                     | 
+ 8     | 167767 | T        | {A}                     | 
+ 8     | 156284 | C        | {A}                     | 
+ 8     | 165836 | C        | {G}                     | 
+ 8     | 166020 | T        | {C}                     | 
+ 8     | 113380 | G        | {A}                     | 
+ 8     | 163555 | G        | {T}                     | 
+ 8     | 168674 | T        | {C}                     | 
+ 8     | 151805 | G        | {A}                     | 
+ 8     | 166720 | A        | {G}                     | 
+ 8     | 165658 | C        | {T}                     | 
+ 8     | 162333 | T        | {C}                     | 
+ 8     | 162034 | C        | {G}                     | 
+ 8     | 155584 | C        | {G}                     | 
+ 8     | 167614 | C        | {T}                     | 
+ 8     | 125528 | T        | {TC}                    | 
+ 8     | 112792 | A        | {T}                     | 
+ 8     | 174130 | A        | {G}                     | 
+ 8     | 169156 | T        | {C}                     | 
+ 8     | 120604 | A        | {G}                     | 
+ 8     | 172882 | A        | {G}                     | 
+ 8     | 173713 | C        | {T}                     | 
+ 8     | 169858 | T        | {A}                     | 
+ 8     | 171939 | G        | {A}                     | 
+ 8     | 174367 | T        | {G}                     | 
+ 8     | 165490 | G        | {A}                     | 
+ 8     | 142098 | A        | {C}                     | 
+ 8     | 173602 | C        | {A}                     | 
+ 8     | 137446 | T        | {C}                     | 
+ 8     | 147206 | A        | {G}                     | 
+ 8     | 164050 | A        | {T}                     | 
+ 8     | 172938 | C        | {T}                     | 
+ 8     | 170755 | G        | {C}                     | 
+ 8     | 145478 | C        | {T}                     | 
+ 8     | 163757 | T        | {C}                     | 
+ 8     | 113478 | T        | {A}                     | 
+ 8     | 152667 | C        | {T}                     | 
+ 8     | 165084 | T        | {C}                     | 
+ 8     | 152393 | G        | {T}                     | 
+ 8     | 171115 | C        | {T}                     | 
+ 8     | 156288 | G        | {C}                     | 
+ 8     | 165815 | A        | {T}                     | 
+ 8     | 172042 | G        | {A}                     | 
+ 8     | 128456 | C        | {A}                     | 
+ 8     | 171102 | C        | {T}                     | 
+ 8     | 136912 | C        | {T}                     | 
+ 8     | 164399 | A        | {C}                     | 
+ 8     | 114860 | G        | {T}                     | 
+ 8     | 161471 | C        | {T}                     | 
+ 8     | 161575 | C        | {T}                     | 
+ 8     | 166408 | C        | {A}                     | 
+ 8     | 167101 | C        | {G}                     | 
+ 8     | 174074 | T        | {C}                     | 
+ 8     | 156513 | C        | {T}                     | 
+ 8     | 165772 | T        | {C}                     | 
+ 8     | 162281 | A        | {C}                     | 
+ 8     | 163476 | G        | {A}                     | 
+ 8     | 151755 | T        | {C}                     | 
+ 8     | 156577 | G        | {A}                     | 
+ 8     | 174944 | G        | {A}                     | 
+ 8     | 174115 | G        | {C}                     | 
+ 8     | 147101 | C        | {G}                     | 
+ 8     | 172520 | G        | {A}                     | 
+ 8     | 156703 | C        | {T}                     | 
+ 8     | 174284 | A        | {T}                     | 
+ 8     | 166841 | T        | {G}                     | 
+ 8     | 171691 | T        | {C}                     | 
+ 8     | 164756 | C        | {T}                     | 
+ 8     | 170900 | G        | {T}                     | 
+ 8     | 121029 | T        | {C}                     | 
+ 8     | 162545 | C        | {T}                     | 
+ 8     | 163506 | T        | {C}                     | 
+ 8     | 155111 | C        | {A}                     | 
+ 8     | 167476 | A        | {C}                     | 
+ 8     | 157675 | C        | {T}                     | 
+ 8     | 152594 | G        | {C}                     | 
+ 8     | 101190 | C        | {T}                     | 
+ 8     | 119716 | G        | {GA}                    | 
+ 8     | 155747 | C        | {G}                     | 
+ 8     | 162218 | G        | {A}                     | 
+ 8     | 169227 | G        | {A}                     | 
+ 8     | 116895 | A        | {G}                     | 
+ 8     | 155834 | G        | {A}                     | 
+ 8     | 166869 | T        | {C}                     | 
+ 8     | 170232 | G        | {A}                     | 
+ 8     | 168974 | A        | {G}                     | 
+ 8     | 101220 | T        | {A}                     | 
+ 8     | 169366 | T        | {C}                     | 
+ 8     | 174055 | G        | {C}                     | 
+ 8     | 142425 | T        | {C}                     | 
+ 8     | 169129 | G        | {A}                     | 
+ 8     | 162904 | C        | {G}                     | 
+ 8     | 174546 | G        | {A}                     | 
+ 8     | 170254 | T        | {C}                     | 
+ 8     | 152031 | T        | {G}                     | 
+ 8     | 121774 | A        | {C}                     | 
+ 8     | 153929 | A        | {G}                     | 
+ 8     | 159196 | T        | {C}                     | 
+ 8     | 139824 | G        | {T}                     | 
+ 8     | 155965 | T        | {G}                     | 
+ 8     | 173976 | A        | {G}                     | 
+ 8     | 165210 | C        | {T}                     | 
+ 8     | 161527 | A        | {G}                     | 
+ 8     | 170598 | C        | {T}                     | 
+ 8     | 173884 | T        | {C}                     | 
+ 8     | 140050 | T        | {C}                     | 
+ 8     | 159130 | G        | {A}                     | 
+ 8     | 162578 | C        | {T}                     | 
+ 8     | 171485 | G        | {T}                     | 
+ 8     | 165672 | G        | {A}                     | 
+ 8     | 169948 | T        | {C}                     | 
+ 8     | 168026 | G        | {C}                     | 
+ 8     | 173235 | G        | {A}                     | 
+ 8     | 165850 | A        | {C}                     | 
+ 8     | 163550 | A        | {G}                     | 
+ 8     | 155195 | G        | {A}                     | 
+ 8     | 169497 | C        | {T}                     | 
+ 8     | 169909 | G        | {A}                     | 
+ 8     | 165655 | G        | {T}                     | 
+ 8     | 165749 | A        | {C}                     | 
+ 8     | 172466 | A        | {C}                     | 
+ 8     | 173619 | A        | {T}                     | 
+ 8     | 156331 | T        | {C}                     | 
+ 8     | 163249 | T        | {C}                     | 
+ 8     | 113557 | A        | {C}                     | 
+ 8     | 174543 | G        | {T}                     | 
+ 8     | 168906 | C        | {G}                     | 
+ 8     | 165598 | G        | {C}                     | 
+ 8     | 166851 | T        | {C}                     | 
+ 8     | 161929 | C        | {T}                     | 
+ 8     | 154709 | G        | {C}                     | 
+ 8     | 171227 | G        | {A}                     | 
+ 8     | 155203 | C        | {G}                     | 
+ 8     | 168271 | T        | {G}                     | 
+(474 rows)
+
+DROP FOREIGN TABLE
+CREATE FOREIGN TABLE
+ count 
+-------
+ 14220
+(1 row)
+
+ begin  |  stop  | sample  | chrom |  pos   |     id      | ref | alt | qual  | filter | format | info | genotype |                              file                               |                     directory                      
+--------+--------+---------+-------+--------+-------------+-----+-----+-------+--------+--------+------+----------+-----------------------------------------------------------------+----------------------------------------------------
+ 100000 | 175000 | NA07357 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA07357.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA12044 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA12044.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA12144 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA12144.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA12340 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA12340.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA12347 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA12347.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA12812 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA12812.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA12827 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA12827.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA12843 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA12843.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA12889 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA12889.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19003 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19003.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+(10 rows)
+
+ count 
+-------
+   948
+(1 row)
+
+ begin  |  stop  | sample  | chrom |  pos   |     id      | ref | alt | qual  | filter | format | info | genotype |                              file                               |                     directory                      
+--------+--------+---------+-------+--------+-------------+-----+-----+-------+--------+--------+------+----------+-----------------------------------------------------------------+----------------------------------------------------
+ 100000 | 175000 | NA19332 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19332.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19764 | 8     | 100957 | rs184153198 | T   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19764.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19332 | 8     | 101005 | rs185827794 | C   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19332.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19764 | 8     | 101005 | rs185827794 | C   | {G} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19764.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19332 | 8     | 101190 | rs190976569 | C   | {T} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19332.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19764 | 8     | 101190 | rs190976569 | C   | {T} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19764.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19332 | 8     | 101200 | rs182688939 | C   | {A} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19332.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19764 | 8     | 101200 | rs182688939 | C   | {A} | 100.0 |        | GT     |      | 1|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19764.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19332 | 8     | 101220 | rs187170796 | T   | {A} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19332.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+ 100000 | 175000 | NA19764 | 8     | 101220 | rs187170796 | T   | {A} | 100.0 |        | GT     |      | 0|0      | /tmp/pg_vcf_wrapper/data/individual_files/NA19764.recode.vcf.gz | /tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz
+(10 rows)
+
+ sample  |                                      file                                      |                  directory                   | population | sra_accession_number | coriell_id | family | gender |  relationship   | type  | whole_genome_center | exome_center | pilot_1_center | pilot_2_center | pilot_3_center | has_omni_genotypes | has_axiom_genotypes | has_more_than_3x_coverage_at_omni_sites | has_more_than_70percent_of_exome_targets_covered_to_20x 
+---------+--------------------------------------------------------------------------------+----------------------------------------------+------------+----------------------+------------+--------+--------+-----------------+-------+---------------------+--------------+----------------+----------------+----------------+--------------------+---------------------+-----------------------------------------+---------------------------------------------------------
+ HG00096 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | GBR        | SRS006837            | HG00096    |        | male   |                 | unrel | WUGSC               | WUGSC        |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00126 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | GBR        | SRS008510            | HG00126    |        | male   |                 | unrel | SC                  | BCM          |                |                |                | 1                  | 0                   | 0                                       | 1
+ HG00149 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | GBR        | SRS006882            | HG00149    |        | male   |                 | unrel | SC                  | BCM          |                |                |                | 1                  | 0                   | 0                                       | 1
+ HG00151 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | GBR        | SRS006884            | HG00151    |        | male   |                 | unrel | SC                  | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00154 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | GBR        | SRS010719            | HG00154    |        | female |                 | unrel | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00255 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | GBR        | SRS006914            | HG00255    |        | female |                 | unrel | MPIMG               | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00259 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | GBR        | SRS008529            | HG00259    |        | female |                 | unrel | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00265 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | GBR        | SRS008535            | HG00265    |        | male   |                 | unrel | SC                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00272 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008542            | HG00272    |        | female |                 | unrel | SC                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00274 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS010724            | HG00274    |        | female |                 | unrel | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00312 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008548            | HG00312    |        | male   |                 | unrel | SC                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00319 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008552            | HG00319    |        | female |                 | unrel | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00321 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008554            | HG00321    |        | male   |                 | unrel | BGI                 | BGI          |                |                |                | 1                  | 0                   | 0                                       | 1
+ HG00336 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008559            | HG00336    |        | male   |                 | unrel | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00342 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008563            | HG00342    |        | male   |                 | unrel | BGI                 | BGI          |                |                |                | 1                  | 0                   | 0                                       | 1
+ HG00350 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008569            | HG00350    |        | female |                 | unrel | BCM                 | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00355 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008572            | HG00355    |        | female |                 | unrel | BCM                 | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00377 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | FIN        | SRS008591            | HG00377    |        | female |                 | unrel | SC                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00421 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008607            | HG00421    | SH007  | male   | father          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00513 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008632            | HG00513    | SH032  | female | mother          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00542 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008646            | HG00542    | SH042  | male   | father          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00557 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008653            | HG00557    | SH045  | female | mother          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00595 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008676            | HG00595    | SH058  | male   | father          | trio  | SC                  | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00608 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008680            | HG00608    | SH062  | female | mother          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00651 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008707            | HG00651    | SH072  | female | mother          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00692 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008727            | HG00692    | SH086  | male   | father          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG00702 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHS        | SRS008734            | HG00702    | SH089  | female | mother          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01079 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | PUR        | SRS008764            | HG01079    | PR21   | male   | father          | trio  | BI                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01098 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | PUR        | SRS008768            | HG01098    | PR31   | female | mother          | trio  | WUGSC               | WUGSC        |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01107 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | PUR        | SRS010776            | HG01107    | PR33   | male   | father          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01171 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | PUR        | SRS010803            | HG01171    | PR24   | female | mother          | trio  | BGI                 | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01191 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | PUR        | SRS010821            | HG01191    | PR40   | female | mother          | trio  | BI                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 0
+ HG01272 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CLM        | SRS010851            | HG01272    | CLM21  | female | mother          | trio  | BCM                 | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01278 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CLM        | SRS010857            | HG01278    | CLM23  | female | mother          | trio  | BCM                 | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01462 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CLM        | SRS074293            | HG01462    | CLM53  | female | mother          | trio  | BI                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01465 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CLM        | SRS074296            | HG01465    | CLM54  | female | mother          | trio  | BI                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ HG01515 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | IBS        | SRS074325            | HG01515    | IBS006 | male   | father          | trio  | WUGSC               | WUGSC        |                |                |                | 1                  | 0                   | 1                                       | 0
+ NA07357 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000038            | NA07357    | 1345   | male   | mat grandfather | trio  | ABI                 | BCM          | ABI            |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA11931 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000051            | NA11931    | 1424   | female | pat grandmother | trio  | SC/454MSC           | BGI          | SC/454MSC      |                |                | 1                  | 1                   | 1                                       | 1
+ NA11932 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS001261            | NA11932    | 1424a  | male   | mat grandfather | unrel | MPIMG               | BGI          |                |                |                | 1                  | 0                   | 1                                       | 1
+ NA11992 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000052            | NA11992    | 1362   | male   | pat grandfather | trio  | BI/BCM              | BCM          | BI/BCM         |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA12044 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000061            | NA12044    | 1346   | female | pat grandmother | trio  | SC/BCM              | BCM          | SC/BCM         |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA12144 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000063            | NA12144    | 1334   | male   | pat grandfather | trio  | ABI                 | BCM          | ABI            |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA12340 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000622            | NA12340    | 1330   | male   | pat grandfather | trio  | BI                  | BI           |                |                | BCM            | 1                  | 1                   | 0                                       | 1
+ NA12347 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000625            | NA12347    | 13281  | male   | pat grandfather | trio  | SC                  | BGI          |                |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA12812 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000082            | NA12812    | 1454   | male   | pat grandfather | trio  | BCM                 | BCM          | BCM            |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA12827 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000637            | NA12827    | 1456   | male   | pat grandfather | trio  | MPIMG               | BGI          |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA12843 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000641            | NA12843    | 1458   | female | mat grandmother | trio  | MPIMG               | BI           |                |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA12889 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CEU        | SRS000642            | NA12889    | 1463   | male   | pat grandfather | trio  | MPIMG               | BI           |                |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA18507 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000101            | NA18507    | Y009   | male   | father          | trio  | SC                  | BCM          | SC             |                |                | 1                  | 1                   | 1                                       | 1
+ NA18510 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000103            | NA18510    | Y010   | male   | not father      | unrel | BI                  | BI           | BI             |                |                | 1                  | 1                   | 1                                       | 1
+ NA18611 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHB        | SRS000666            | NA18611    |        | male   |                 | unrel | BGI                 | BGI          |                |                | WUGSC          | 1                  | 1                   | 0                                       | 1
+ NA18617 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHB        | SRS000671            | NA18617    |        | female |                 | unrel | SC                  | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA18620 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHB        | SRS000674            | NA18620    |        | male   |                 | unrel | BGI                 | BGI          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA18637 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | CHB        | SRS000690            | NA18637    |        | male   |                 | unrel | BGI                 | BGI          |                |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA18868 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000705            | NA18868    | Y007   | male   | father          | trio  | BI                  | BI           |                |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA18874 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000707            | NA18874    | Y019   | male   | father          | trio  | BI                  | BI           |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA18934 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000714            | NA18934    | Y036   | male   | father          | trio  | WUGSC               | WUGSC        |                |                | WUGSC          | 1                  | 1                   | 1                                       | 1
+ NA18948 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | JPT        | SRS000157            | NA18948    |        | male   |                 | unrel | SC                  | BGI          | SC             |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA18961 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | JPT        | SRS000165            | NA18961    |        | male   |                 | unrel | BI                  | BI           | BI             |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA18964 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | JPT        | SRS000166            | NA18964    |        | female |                 | unrel | BI                  | BI           | BI             |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA18988 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | JPT        | SRS001483            | NA18988    |        | male   |                 | unrel | BI                  | BI           |                |                | BI             | 1                  | 0                   | 1                                       | 1
+ NA19003 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | JPT        | SRS000740            | NA19003    |        | female |                 | unrel | BI                  | BI           |                |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA19004 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | JPT        | SRS001485            | NA19004    |        | male   |                 | unrel | BI                  | BI           |                |                |                | 1                  | 0                   | 1                                       | 1
+ NA19054 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | JPT        | SRS000745            | NA19054    |        | female |                 | unrel | BI                  | BI           |                |                | BI             | 1                  | 1                   | 1                                       | 1
+ NA19082 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | JPT        | SRS000769            | NA19082    |        | male   |                 | unrel | SC                  | WUGSC        |                |                | WUGSC          | 1                  | 1                   | 1                                       | 1
+ NA19095 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000777            | NA19095    | Y041   | female | mother          | trio  | BCM                 | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19096 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000778            | NA19096    | Y041   | male   | father          | trio  | BCM                 | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19117 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000781            | NA19117    | Y100   | male   | father          | trio  | BCM                 | BCM          |                |                | BCM            | 1                  | 1                   | 0                                       | 1
+ NA19171 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000201            | NA19171    | Y047   | male   | father          | trio  | WUGSC/MPIMG         | WUGSC        | WUGSC/MPIMG    |                | WUGSC          | 1                  | 1                   | 1                                       | 1
+ NA19225 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | YRI        | SRS000211            | NA19225    | Y057   | female | mother          | trio  | SC                  | BGI          | SC             |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA19308 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001546            | NA19308    |        | male   |                 | unrel | BCM                 | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 0
+ NA19332 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001565            | NA19332    |        | female |                 | unrel | BI                  | BI           |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19350 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001570            | NA19350    |        | male   |                 | unrel | BI                  | BI           |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19379 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001584            | NA19379    |        | female |                 | unrel | ILLUMINA            | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19403 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001603            | NA19403    |        | female |                 | unrel | ILLUMINA            | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19404 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001604            | NA19404    |        | female |                 | unrel | ILLUMINA            | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 0
+ NA19428 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001605            | NA19428    |        | male   |                 | unrel | ILLUMINA            | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19435 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001611            | NA19435    |        | female |                 | unrel | SC                  | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19440 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001616            | NA19440    |        | female |                 | unrel | SC                  | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 0
+ NA19468 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | LWK        | SRS001636            | NA19468    |        | female |                 | unrel | SC                  | BCM          |                |                | BCM            | 1                  | 1                   | 1                                       | 1
+ NA19704 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | ASW        | SRS003672            | NA19704    | 2368   | female | mother          | trio  | BI                  | BI           |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA19713 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | ASW        | SRS003678            | NA19713    | 2436   | female | mother          | trio  | BI                  | BI           |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA19719 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | MXL        | SRS003683            | NA19719    | m015   | female | mother          | trio  | BI                  | BI           |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA19764 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | MXL        | SRS006567            | NA19764    | 2405   | female | mother          | unrel | MPIMG               | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ NA19917 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | ASW        | SRS003752            | NA19917    | 2431   | female | mother          | trio  | BI                  | BI           |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA19923 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | ASW        | SRS006573            | NA19923    | 2434   | female | mother          | unrel | BCM                 | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ NA20126 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | ASW        | SRS003760            | NA20126    | 2446   | male   | father          | trio  | WUGSC               | WUGSC        |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA20289 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | ASW        | SRS003773            | NA20289    | 2471   | female | mother          | duo   | WUGSC               | WUGSC        |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA20291 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | ASW        | SRS003775            | NA20291    | 2472   | male   | father          | duo   | WUGSC               | WUGSC        |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA20359 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | ASW        | SRS003810            | NA20359    | 2495   | female | mother          | duo   | MPIMG               | BCM          |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA20534 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001701            | NA20534    |        | male   |                 | unrel | SC                  | BCM          |                |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA20535 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001702            | NA20535    |        | female |                 | unrel | SC                  | BCM          |                |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA20536 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001703            | NA20536    |        | male   |                 | unrel | SC                  | BCM          |                |                |                | 1                  | 0                   | 1                                       | 1
+ NA20582 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001713            | NA20582    |        | female |                 | unrel | SC                  | BGI          |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA20585 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001714            | NA20585    |        | female |                 | unrel | SC                  | BGI          |                |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA20753 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001720            | NA20753    |        | female |                 | unrel | SC                  | BGI          |                |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA20761 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001728            | NA20761    |        | female |                 | unrel | SC                  | BGI          |                |                |                | 1                  | 1                   | 1                                       | 1
+ NA20769 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001736            | NA20769    |        | female |                 | unrel | SC                  | BI           |                |                | SC             | 1                  | 1                   | 1                                       | 1
+ NA20786 | /pub/PostgreSQL/test_files/one_big_file/subset.chr8.1000.genomes.recode.vcf.gz | /pub/PostgreSQL/test_files/one_big_file/*.gz | TSI        | SRS001747            | NA20786    |        | female |                 | unrel | SC                  | BI           |                |                | SC             | 1                  | 1                   | 1                                       | 1
+(100 rows)
+
+DROP TABLE
+DROP FOREIGN TABLE
+ proc_vcf_gtwide_create 
+------------------------
+                      1
+(1 row)
+
+ chrom | begin  |  stop  | sample |  pos   |     id      |  ref  | alt | qual  | filter | format | info | HG00096 | HG00126 | HG00149 | HG00151 | HG00154 | HG00255 | HG00259 | HG00265 | HG00272 | HG00274 | HG00312 | HG00319 | HG00321 | HG00336 | HG00342 | HG00350 | HG00355 | HG00377 | HG00421 | HG00513 | HG00542 | HG00557 | HG00595 | HG00608 | HG00651 | HG00692 | HG00702 | HG01079 | HG01098 | HG01107 | HG01171 | HG01191 | HG01272 | HG01278 | HG01462 | HG01465 | HG01515 | NA07357 | NA11931 | NA11932 | NA11992 | NA12044 | NA12144 | NA12340 | NA12347 | NA12812 | NA12827 | NA12843 | NA12889 | NA18507 | NA18510 | NA18611 | NA18617 | NA18620 | NA18637 | NA18868 | NA18874 | NA18934 | NA18948 | NA18961 | NA18964 | NA18988 | NA19003 | NA19004 | NA19054 | NA19082 | NA19095 | NA19096 | NA19117 | NA19171 | NA19225 | NA19308 | NA19332 | NA19350 | NA19379 | NA19403 | NA19404 | NA19428 | NA19435 | NA19440 | NA19468 | NA19704 | NA19713 | NA19719 | NA19764 | NA19917 | NA19923 | NA20126 | NA20289 | NA20291 | NA20359 | NA20534 | NA20535 | NA20536 | NA20582 | NA20585 | NA20753 | NA20761 | NA20769 | NA20786 |                                       file                                       
+-------+--------+--------+--------+--------+-------------+-------+-----+-------+--------+--------+------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+----------------------------------------------------------------------------------
+ 8     | 100000 | 175000 |        | 100957 | rs184153198 | T     | {G} | 100.0 |        | GT     |      | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 101005 | rs185827794 | C     | {G} | 100.0 |        | GT     |      | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 101190 | rs190976569 | C     | {T} | 100.0 |        | GT     |      | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 1|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 101200 | rs182688939 | C     | {A} | 100.0 |        | GT     |      | 1|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 1|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 101220 | rs187170796 | T     | {A} | 100.0 |        | GT     |      | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 103054 | .           | GAGAA | {G} | 117.0 |        | GT     |      | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 111037 | .           | AG    | {A} | 102.0 |        | GT     |      | 1|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|1     | 1|1     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 112400 | rs191918365 | G     | {A} | 100.0 |        | GT     |      | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 1|1     | 1|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 112460 | rs182888529 | T     | {C} | 100.0 |        | GT     |      | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 |        | 112792 | rs147619884 | A     | {T} | 100.0 |        | GT     |      | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|1     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 1|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|1     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | 0|0     | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+(10 rows)
+
+ chrom |  pos   |  ref  | alt | NA19764 | NA19332 
+-------+--------+-------+-----+---------+---------
+ 8     | 100957 | T     | {G} | 0|0     | 0|0
+ 8     | 101005 | C     | {G} | 0|0     | 0|0
+ 8     | 101190 | C     | {T} | 0|0     | 0|0
+ 8     | 101200 | C     | {A} | 1|0     | 0|0
+ 8     | 101220 | T     | {A} | 0|0     | 0|0
+ 8     | 103054 | GAGAA | {G} | 0|0     | 0|0
+ 8     | 111037 | AG    | {A} | 0|0     | 0|0
+ 8     | 112400 | G     | {A} | 0|0     | 0|0
+ 8     | 112460 | T     | {C} | 0|0     | 0|0
+ 8     | 112792 | A     | {T} | 0|0     | 0|0
+(10 rows)
+
+ chrom | begin  |  stop  |             sample              |  pos   |     id      |  ref  | alt | qual  | filter | format | info | HG00096 | HG00126 | HG00149 | HG00151 | HG00154 | HG00255 | HG00259 | HG00265 | HG00272 | HG00274 | HG00312 | HG00319 | HG00321 | HG00336 | HG00342 | HG00350 | HG00355 | HG00377 | HG00421 | HG00513 | HG00542 | HG00557 | HG00595 | HG00608 | HG00651 | HG00692 | HG00702 | HG01079 | HG01098 | HG01107 | HG01171 | HG01191 | HG01272 | HG01278 | HG01462 | HG01465 | HG01515 | NA07357 | NA11931 | NA11932 | NA11992 | NA12044 | NA12144 | NA12340 | NA12347 | NA12812 | NA12827 | NA12843 | NA12889 | NA18507 | NA18510 | NA18611 | NA18617 | NA18620 | NA18637 | NA18868 | NA18874 | NA18934 | NA18948 | NA18961 | NA18964 | NA18988 | NA19003 | NA19004 | NA19054 | NA19082 | NA19095 | NA19096 | NA19117 | NA19171 | NA19225 | NA19308 | NA19332 | NA19350 | NA19379 | NA19403 | NA19404 | NA19428 | NA19435 | NA19440 | NA19468 | NA19704 | NA19713 | NA19719 | NA19764 | NA19917 | NA19923 | NA20126 | NA20289 | NA20291 | NA20359 | NA20534 | NA20535 | NA20536 | NA20582 | NA20585 | NA20753 | NA20761 | NA20769 | NA20786 |                                       file                                       
+-------+--------+--------+---------------------------------+--------+-------------+-------+-----+-------+--------+--------+------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+----------------------------------------------------------------------------------
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 100957 | rs184153198 | T     | {G} | 100.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 101005 | rs185827794 | C     | {G} | 100.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 101190 | rs190976569 | C     | {T} | 100.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 101200 | rs182688939 | C     | {A} | 100.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 101220 | rs187170796 | T     | {A} | 100.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 103054 | .           | GAGAA | {G} | 117.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 111037 | .           | AG    | {A} | 102.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 112400 | rs191918365 | G     | {A} | 100.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 112460 | rs182888529 | T     | {C} | 100.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         | 0|0     |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+ 8     | 100000 | 175000 | NA20126|NA18611|NA18637|NA12889 | 112792 | rs147619884 | A     | {T} | 100.0 |        | GT     |      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 1|0     |         |         | 0|0     |         |         | 0|1     |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | 0|0     |         |         |         |         |         |         |         |         |         |         |         |         | /tmp/pg_vcf_wrapper/data/aggregated_files/subset.chr8.1000.genomes.recode.vcf.gz
+(10 rows)
+
+DROP FOREIGN TABLE
+DROP SCHEMA
+DROP SERVER
+DROP SERVER
+DROP SERVER
+DROP SERVER
+ROLLBACK
