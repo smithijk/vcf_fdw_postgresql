@@ -110,7 +110,7 @@ WHERE chrom = '8' AND begin = '100000' AND stop = '175000'
 AND directory = '/path/to/vcf_files/*gz';
 ```
 
-Query below uses a crosstab to retrieve sample genotypes in wide form
+Query below uses a crosstab to retrieve sample genotypes in wide form.
 
 ```sql
 SELECT * FROM CROSSTAB(
@@ -120,7 +120,7 @@ WHERE chrom = ''8'' AND begin = ''100000'' AND stop = ''175000'' AND directory =
 AS (pos INT, chrom TEXT, id TEXT, "HG00096" TEXT, "HG00126" TEXT)
 ```
 
-Query below does the same but via an intermediate table
+Query below does the same as above but much more quickly via an intermediate table.
 
 ```sql
 SELECT proc_vcf_gtwide_create('test_vcf_gt_wide', '/path/to/vcf_files/*.vcf.gz');
@@ -132,8 +132,8 @@ ORDER BY pos limit 10;
 ```
 Notes:
 
-    * You are able to join these foreign data tables with ordinary data tables.
-The test scripts included herein test this capability.
+* You are able to join these foreign data tables with ordinary data tables. The test scripts included here test this capability.
+
 
 Disclaimer
 ==========
