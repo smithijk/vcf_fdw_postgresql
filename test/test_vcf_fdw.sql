@@ -82,7 +82,8 @@ SELECT * FROM test_vcf_sample_info AS v inner join thou_demographics AS d ON d.c
  
 SELECT distinct chrom, pos, ref, alt, info FROM test_vcf_snp_info 
 WHERE chrom = '8' AND begin = '100000' AND stop = '175000' 
-AND directory = '/tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz';
+AND directory = '/tmp/pg_vcf_wrapper/data/individual_files/*.vcf.gz' 
+ORDER BY pos;
 
 DROP FOREIGN TABLE test_vcf_snp_info;
 
@@ -128,7 +129,7 @@ WHERE chrom = '8' AND begin = '100000' AND stop = '175000'
 ORDER by pos, sample LIMIT 10;
 
 SELECT * FROM test_vcf_sample_info AS v INNER JOIN thou_demographics AS d 
-  ON d.coriell_id = v.sample WHERE directory='/pub/PostgreSQL/test_files/one_big_file/*.gz'; 
+  ON d.coriell_id = v.sample WHERE directory='/tmp/pg_vcf_wrapper/data/aggregated_files/*.gz'; 
 
 
 DROP TABLE thou_demographics;
@@ -147,18 +148,15 @@ from test_vcf_gt_wide
 where chrom = '8' AND begin = '100000' AND stop = '175000'
 order by pos limit 10;
 
-select * from test_vcf_gt_wide as v 
-where chrom='8' and begin='100000' and stop='175000'
-and sample = 'NA20126|NA18611|NA18637|NA12889'
-order by pos limit 10;
+SELECT * FROM test_vcf_gt_wide 
+WHERE chrom='8' AND begin='100000' AND stop='175000'
+AND sample = 'NA20126|NA18611|NA18637|NA12889'
+ORDER BY pos limit 10;
 
--- Below query doesn't work
-/*** 
-select * from test_vcf_gt_wide as v 
-where chrom='8' and begin='100000' and stop='175000'
-and sample in ('NA20126', 'NA18611', 'NA18637', 'NA12889')
-order by pos limit 10; 
-***/
+--select * from test_vcf_gt_wide  
+--where chrom='8' and begin='100000' and stop='175000'
+--and sample in ('NA20126', 'NA18611', 'NA18637', 'NA12889')
+--order by pos limit 10; 
 
 DROP FOREIGN TABLE test_vcf_gt_wide;
 

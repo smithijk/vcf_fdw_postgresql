@@ -80,7 +80,7 @@ class genotypeFdw (ForeignDataWrapper):
             reader.subset_by_samples(wanted_sample)
         except:
           continue
-        for record in reader.fetch(chrom, begin, stop):
+        for record in reader.fetch(str(chrom), int(begin), int(stop)):
           line = {}
           line['file'] = vcf_file
           line['begin'] = begin
@@ -164,7 +164,7 @@ class gtWideFdw (vcfWrapper):
       line['file'] = vcf_file
       if len(wanted_sample) > 0 and len(curr_reader.samples) == 0:
         continue
-      for record in curr_reader.fetch(chrom, begin, stop):
+      for record in curr_reader.fetch(str(chrom), int(begin), int(stop)):
         line['chrom'] = record.CHROM
         line['pos'] = record.POS
         line['id'] = record.ID
@@ -236,7 +236,7 @@ class infoFdw (ForeignDataWrapper):
           reader.subset_by_samples([])
         except:
           continue
-        for record in reader.fetch(chrom, begin, stop):
+        for record in reader.fetch(str(chrom), int(begin), int(stop)):
           line = {}
           line['file'] = vcf_file
           line['begin'] = begin

@@ -15,7 +15,7 @@ BEGIN
     sample VARCHAR,
     file VARCHAR,
     directory VARCHAR
-  ) SERVER multicorn_vcf_sample' ;
+  ) SERVER test_multicorn_vcf_sample' ;
  
   EXECUTE 'SELECT string_agg(quote_ident(v.sample::varchar(30)) || '' text,'', '''') FROM ' || sample_table || ' v WHERE directory = ''' || directory || ''''
      into  sample_str;
@@ -32,7 +32,7 @@ BEGIN
             || 'qual VARCHAR, filter VARCHAR,'
             || 'format VARCHAR, info VARCHAR,'
             || sample_str || 'file VARCHAR) '
-            || 'SERVER multicorn_vcf_gt_wide '
+            || 'SERVER test_multicorn_vcf_gt_wide '
             || 'OPTIONS( directory ''' || directory || ''')';
 
   -- RAISE NOTICE '%', tbl_sql;
