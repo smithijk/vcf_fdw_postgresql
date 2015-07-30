@@ -78,21 +78,21 @@ CREATE FOREIGN TABLE vcf_sample_info(
 Basic Usage
 ============
 
-Query below retrieves SNPs info and genotypes for all samples in the vcf files for the SNPs within the specified region.
+The query below retrieves info and genotypes for all samples in the vcf files for the SNPs within the specified region.
 
 ```sql
 SELECT * FROM vcfinfo WHERE chrom = '8' AND begin = '100000' AND stop = '175000' 
 AND directory = '/path/to/vcf/files/*gz';
 ```
 
-Query below retrieves SNPs info and genotypes only for samples "sample1" and "sample2"
+The query below retrieves info and genotypes only for samples "sample1" and "sample2"
 
 ```sql
 SELECT * FROM vcfinfo WHERE chrom = '8' AND begin = '100000' AND stop = '175000' 
   AND sample in ('sample1', 'sample2') AND directory = '/path/to/vcf/files/*gz';
 ```
 
-Query below retrieves sampleids included in the vcf files.
+The query below retrieves sampleids included in the vcf files.
 
 ```sql
 
@@ -100,7 +100,7 @@ SELECT * from vcf_sample_info WHERE
       directory = '/path/to/vcf/file.vcf.gz';
 ```
 
-Query below retrieves variants information included in the vcf files, but
+The query below retrieves variant information included in the vcf files, but
 does not retrieve genotypes.
 
 ```sql
@@ -110,7 +110,7 @@ WHERE chrom = '8' AND begin = '100000' AND stop = '175000'
 AND directory = '/path/to/vcf_files/*gz';
 ```
 
-Query below uses a crosstab to retrieve sample genotypes in wide form.
+The query below uses a crosstab to retrieve sample genotypes in wide form.
 
 ```sql
 SELECT * FROM CROSSTAB(
@@ -120,7 +120,7 @@ WHERE chrom = ''8'' AND begin = ''100000'' AND stop = ''175000'' AND directory =
 AS (pos INT, chrom TEXT, id TEXT, "HG00096" TEXT, "HG00126" TEXT)
 ```
 
-Query below does the same as above but much more quickly via an intermediate table.
+The query below does the same as above but much more quickly via an intermediate table.
 
 ```sql
 SELECT proc_vcf_gtwide_create('test_vcf_gt_wide', '/path/to/vcf_files/*.vcf.gz');
