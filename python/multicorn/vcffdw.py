@@ -161,6 +161,7 @@ class gtWideFdw (vcfWrapper):
     }
 
     for vcf_file, curr_reader in self.readers.items():
+      print(curr_reader.samples)
       line['file'] = vcf_file
       if len(wanted_sample) > 0 and len(curr_reader.samples) == 0:
         continue
