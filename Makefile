@@ -1,5 +1,5 @@
 
-MULTICORN = /pub/share/vcf_proj/multicorn-1.0.0.beta
+MULTICORN = /pub/share/vcf_proj/multicorn-1.0.2
 TESTDIR = /tmp/pg_vcf_wrapper
 TESTOUTPUT = ${TESTDIR}/test_vcf_fdw.out
 

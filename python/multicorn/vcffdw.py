@@ -80,7 +80,7 @@ class genotypeFdw (ForeignDataWrapper):
             reader.subset_by_samples(wanted_sample)
         except:
           continue
-        for record in reader.fetch(chrom, begin, stop):
+        for record in reader.fetch(str(chrom), int(begin), int(stop)):
           line = {}
           line['file'] = vcf_file
           line['begin'] = begin
@@ -143,16 +143,24 @@ class gtWideFdw (vcfWrapper):
     all_samples = self.reset_samples()
 
     if (qsample is None):
+      print("here in if")
       wanted_sample = all_samples
     elif (type(qsample) != list):
-      wanted_sample = re.split('\|', qsample)
+      print("here in elif")
+      wanted_sample = [qsample] 
     else:
-      raise Exception("query 'sample in (a,b,c)' is not implemented. Use sample='a|b|c' instead.")
+      print("here in else")
+      wanted_sample = qsample
+      print(wanted_sample)
 
     wanted_sample = [s for s in wanted_sample if s in columns]
-
+    print(wanted_sample)
+    print(len(wanted_sample))
+    print(len(all_samples))
     if (len(wanted_sample) != len(all_samples)):
+      print("about to subset samples")
       self.subset_by_samples(wanted_sample)
+
       
     line = { 'directory' : directory,
              'begin' : begin,
@@ -161,10 +169,11 @@ class gtWideFdw (vcfWrapper):
     }
 
     for vcf_file, curr_reader in self.readers.items():
+      print(curr_reader.samples)
       line['file'] = vcf_file
       if len(wanted_sample) > 0 and len(curr_reader.samples) == 0:
         continue
-      for record in curr_reader.fetch(chrom, begin, stop):
+      for record in curr_reader.fetch(str(chrom), int(begin), int(stop)):
         line['chrom'] = record.CHROM
         line['pos'] = record.POS
         line['id'] = record.ID
@@ -236,7 +245,7 @@ class infoFdw (ForeignDataWrapper):
           reader.subset_by_samples([])
         except:
           continue
-        for record in reader.fetch(chrom, begin, stop):
+        for record in reader.fetch(str(chrom), int(begin), int(stop)):
           line = {}
           line['file'] = vcf_file
           line['begin'] = begin

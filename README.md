@@ -7,10 +7,10 @@ This is a PostgreSQL foreign data wrapper to one or a collection of VCF files. T
 Requirements
 ============
 
-1. PostgreSQL 9.1 or greater
-2. Multicorn 0.9.1 or greater
+1. PostgreSQL 9.4 or greater
+2. Multicorn 1.0.2 or greater 
 3. modified CyVCF library that accepts user input as to which samples to retrieve. See https://github.com/wenjiany/cyvcf
-4. VCF files are tabix indexed
+4. VCF files which are tabix indexed
 
 
 Installation
