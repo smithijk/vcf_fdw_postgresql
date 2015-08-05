@@ -142,12 +142,19 @@ class gtWideFdw (vcfWrapper):
     ''' Select samples to be returned, not clear if it would improve speed in some situations '''
     all_samples = self.reset_samples()
 
+    sample_fld = None
     if (qsample is None):
       wanted_sample = all_samples
     elif (type(qsample) != list):
       wanted_sample = re.split('\|', qsample)
+      sample_fld = qsample
     else:
-      raise Exception("query 'sample in (a,b,c)' is not implemented. Use sample='a|b|c' instead.")
+      ## For query 'sample in (a,b,c)', sample column is 'MULTIPLE'
+      wanted_sample = qsample
+      if 'MULTIPLE' in qsample:
+        sample_fld = 'MULTIPLE'
+      else:
+        raise Exception("For query in the form of 'sample in (a,b,c)', 'MULTIPLE' needs to be included in the list of samples")
 
     wanted_sample = [s for s in wanted_sample if s in columns]
 
@@ -157,7 +164,7 @@ class gtWideFdw (vcfWrapper):
     line = { 'directory' : directory,
              'begin' : begin,
              'stop' : stop,
-             'sample' : qsample,
+             'sample' : sample_fld,
     }
 
     for vcf_file, curr_reader in self.readers.items():

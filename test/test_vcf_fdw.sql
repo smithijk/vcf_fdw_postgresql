@@ -153,10 +153,24 @@ WHERE chrom='8' AND begin='100000' AND stop='175000'
 AND sample = 'NA20126|NA18611|NA18637|NA12889'
 ORDER BY pos limit 10;
 
---select * from test_vcf_gt_wide  
---where chrom='8' and begin='100000' and stop='175000'
---and sample in ('NA20126', 'NA18611', 'NA18637', 'NA12889')
---order by pos limit 10; 
+-- need to include 'MULTIPLE' in the list of samples
+select * from test_vcf_gt_wide  
+where chrom='8' and begin='100000' and stop='175000'
+and sample in ('MULTIPLE', 'NA20126', 'NA18611', 'NA18637', 'NA12889')
+order by pos limit 10; 
+
+-- the following subquery is not working yet
+
+-- CREATE TEMPORARY TABLE tmp_tbl_samples (
+--   sampleid TEXT
+-- );
+-- INSERT INTO tmp_tbl_samples VALUES
+-- ('NA19332'), ('NA19764');
+
+-- select * from test_vcf_gt_wide  
+-- where chrom='8' and begin='100000' and stop='175000'
+-- and sample in (SELECT sampleid from tmp_tbl_samples)
+-- order by pos limit 10; 
 
 DROP FOREIGN TABLE test_vcf_gt_wide;
 
