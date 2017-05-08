@@ -18,7 +18,7 @@ Installation
 
 1. Copy ./python/multicorn/vcffdw.py to multicorn-version/python/multicorn/ directory.
 2. cd multicorn-version
-3. make && make install 
+3. make & make install 
 4. Execute the following SQL commands in PostgreSQL:
 
 ```sql
